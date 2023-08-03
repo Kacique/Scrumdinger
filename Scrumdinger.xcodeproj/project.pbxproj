@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		342F4DC72A7041C40022CB98 /* TrailingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F4DC62A7041C40022CB98 /* TrailingIcon.swift */; };
+		344204182A7BED7000DCBB36 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344204172A7BED7000DCBB36 /* DetailView.swift */; };
 		349748722A70004000576C42 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349748712A70004000576C42 /* Theme.swift */; };
 		349748762A700A8A00576C42 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349748752A700A8A00576C42 /* DailyScrum.swift */; };
 		349748782A70149A00576C42 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349748772A70149A00576C42 /* CardView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		342F4DC62A7041C40022CB98 /* TrailingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIcon.swift; sourceTree = "<group>"; };
+		344204172A7BED7000DCBB36 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		349748712A70004000576C42 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		349748752A700A8A00576C42 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		349748772A70149A00576C42 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 		34E499292A6EEDC400659ADF = {
 			isa = PBXGroup;
 			children = (
-				34F6ED3B2A718A6A0030DD7F /* ScrumsView.swift */,
 				34E499342A6EEDC400659ADF /* Scrumdinger */,
 				34E499332A6EEDC400659ADF /* Products */,
 			);
@@ -71,6 +72,8 @@
 		34E499342A6EEDC400659ADF /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				34F6ED3B2A718A6A0030DD7F /* ScrumsView.swift */,
+				344204172A7BED7000DCBB36 /* DetailView.swift */,
 				349748702A70000D00576C42 /* Models */,
 				34E499352A6EEDC400659ADF /* ScrumdingerApp.swift */,
 				34E499372A6EEDC400659ADF /* MeetingView.swift */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				349748762A700A8A00576C42 /* DailyScrum.swift in Sources */,
+				344204182A7BED7000DCBB36 /* DetailView.swift in Sources */,
 				34E499382A6EEDC400659ADF /* MeetingView.swift in Sources */,
 				349748722A70004000576C42 /* Theme.swift in Sources */,
 				34F6ED3C2A718A6A0030DD7F /* ScrumsView.swift in Sources */,
