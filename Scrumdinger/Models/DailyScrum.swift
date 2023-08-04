@@ -12,6 +12,23 @@ struct DailyScrum: Identifiable {
     var title: String
     var attendees: [Attendee]
     var lengthInMinutes: Int
+    var lengthInMinutesAsDouble: Double{
+        /*
+         By using a computed property, you can provide a getter to
+         retrieve the scrum’s length as a double value and a setter to
+         update the corresponding integer value when the slider changes.
+         */
+        get{
+            Double(lengthInMinutes)
+        }
+        set{
+            /*
+             When the slider changes the value of lengthInMinutesAsDouble,
+             convert the double value to an integer, and update the lengthInMinutes property.
+             */
+            lengthInMinutes = Int(newValue)
+        }
+    }
     var theme: Theme
     
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
@@ -71,5 +88,9 @@ extension DailyScrum{
             self.id = id
             self.name = name
         }
+    }
+    
+    static var emptyScrum: DailyScrum{
+        DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
     }
 }
