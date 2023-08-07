@@ -9,8 +9,10 @@ import SwiftUI
 
 struct DetailView: View {
     
-    let scrum: DailyScrum
+    //let scrum: DailyScrum
+    @Binding var scrum: DailyScrum
     
+    @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -51,11 +53,15 @@ struct DetailView: View {
         .toolbar{
             Button("Edit"){
                 isPresentingEditView = true
+                editingScrum = scrum
             }
         }
         .sheet(isPresented: $isPresentingEditView){
             NavigationStack{
-                DetailEditView()
+                /**
+                 Changes that a user makes to scrum in the edit view are shared with the editingScrum property in the detail view.
+                 */
+                DetailEditView(scrum: $editingScrum)
                     .navigationTitle(scrum.title)
                     .toolbar{
                         ToolbarItem(placement: .cancellationAction){
@@ -66,6 +72,8 @@ struct DetailView: View {
                         ToolbarItem(placement: .confirmationAction){
                             Button("Done"){
                                 isPresentingEditView = false
+                                //update scrum when the user taps the Done button.
+                                scrum = editingScrum
                             }
                         }
                     }
@@ -77,7 +85,8 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack{
-            DetailView(scrum: DailyScrum.sampleData[0])
+            //DetailView(scrum: DailyScrum.sampleData[0])
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     }
 }
