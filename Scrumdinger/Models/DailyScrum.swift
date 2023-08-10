@@ -11,6 +11,7 @@ struct DailyScrum: Identifiable {
     var id: UUID
     var title: String
     var attendees: [Attendee]
+    var theme: Theme
     var lengthInMinutes: Int
     var lengthInMinutesAsDouble: Double{
         /*
@@ -29,7 +30,6 @@ struct DailyScrum: Identifiable {
             lengthInMinutes = Int(newValue)
         }
     }
-    var theme: Theme
     
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
